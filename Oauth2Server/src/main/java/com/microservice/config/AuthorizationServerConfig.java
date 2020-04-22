@@ -51,7 +51,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 
 		// @formatter:off
-		clients.inMemory().withClient("nguyenvt2").secret("{noop}alo")
+		clients.inMemory().withClient("").secret("{noop}alo")
 				.authorizedGrantTypes("password", "client_credentials", "authorization_code", "refresh_token")
 				.autoApprove(true).scopes("profile", "read", "write");
 		// @formatter:on
